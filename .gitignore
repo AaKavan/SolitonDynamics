@@ -13,6 +13,7 @@
 !*.png
 !*.txt
 !*.py
+!*.pdf
 
 # 5. Exception: Keep Makefiles (usually good to save)
 !Makefile
