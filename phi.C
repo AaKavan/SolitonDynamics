@@ -144,12 +144,12 @@ int main(){
         // since there are only 5 cases (t = 0, ..., 5), I will hardcode the values
         // otherwise I could use strings to write the values
 
-        if (t == 0) write_phi_file("phi_t0.txt", x_vals, phi, Nx);
-        if (t == 1) write_phi_file("phi_t1.txt", x_vals, phi, Nx);
-        if (t == 2) write_phi_file("phi_t2.txt", x_vals, phi, Nx);
-        if (t == 3) write_phi_file("phi_t3.txt", x_vals, phi, Nx);
-        if (t == 4) write_phi_file("phi_t4.txt", x_vals, phi, Nx);
-        if (t == 5) write_phi_file("phi_t5.txt", x_vals, phi, Nx);
+        if (t == 0) write_phi_file("data_files/phi_t0.txt", x_vals, phi, Nx);
+        if (t == 1) write_phi_file("data_files/phi_t1.txt", x_vals, phi, Nx);
+        if (t == 2) write_phi_file("data_files/phi_t2.txt", x_vals, phi, Nx);
+        if (t == 3) write_phi_file("data_files/phi_t3.txt", x_vals, phi, Nx);
+        if (t == 4) write_phi_file("data_files/phi_t4.txt", x_vals, phi, Nx);
+        if (t == 5) write_phi_file("data_files/phi_t5.txt", x_vals, phi, Nx);
 
         // now everything should be written to the text files
     }

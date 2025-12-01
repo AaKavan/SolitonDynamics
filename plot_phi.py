@@ -12,7 +12,7 @@ plt.figure(figsize=(10, 6))
 
 for t in t_values:
     # Load the file
-    file = f"phi_t{t}.txt"
+    file = f"data_files/phi_t{t}.txt"
     data = np.loadtxt(file)
 
     x = data[:, 0]
@@ -29,4 +29,4 @@ plt.title(r"Evolution of $\phi(x,t) = f(x-t)$ for $t = 0,1,2,3,4,5$", fontsize=1
 plt.legend()
 plt.grid(True)
 plt.tight_layout()
-plt.savefig("phi_time_evolution.png", dpi=200)
+plt.savefig("plots/phi_time_evolution.png", dpi=200)

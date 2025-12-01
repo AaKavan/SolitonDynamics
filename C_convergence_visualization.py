@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 # Load the (h, deltaC) data
 # Skip the header row
-data = np.loadtxt("C_convergence.txt", skiprows=1)
+data = np.loadtxt("data_files/C_convergence.txt", skiprows=1)
 h = data[:, 0]
 deltaC = data[:, 1]
 

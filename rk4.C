@@ -39,7 +39,7 @@ int main(){
     double X = X_initial;
 
     // Output file for writng the values to
-    ofstream outfile("kdv_forward_solution.txt");
+    ofstream outfile("data_files/kdv_forward_solution.txt");
     outfile << "X    f(X)    f'(X)    f''(X)    C(X)    absolute_error" << endl;
     // set it to scientific precision with 15
     outfile << scientific << setprecision(15);

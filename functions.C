@@ -98,8 +98,8 @@ double Pn(int n, double xi[], double yi[], double x){
 // make the filename[] a const char so it doesn't throw errors while compiling
 void write_phi_file(const char filename[], double x[], double phi[], int Nx){
 
-    // Write to a file
-    ofstream outfile(filename);
+    // Write to a file in the data_files directory
+    ofstream outfile("data_files/" + string(filename));
 
     // set the precision to a scientific with 15
     outfile << scientific << setprecision(15);

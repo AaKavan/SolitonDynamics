@@ -23,7 +23,7 @@ int main(){
     int number_of_cases = 6;
 
     // Output file for writing h and deltaC to
-    ofstream outfile("C_convergence.txt");
+    ofstream outfile("data_files/C_convergence.txt");
     outfile << "h    deltaC_at_X5" << endl;
     // set the precision to 15 and scientific
     outfile << scientific << setprecision(15);
