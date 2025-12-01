@@ -19,3 +19,17 @@ plt.grid(True, which="both", ls="--")
 plt.tight_layout()
 
 # We can fit a test straight line to estimate convergence order
+logh = np.log(h)
+log_err = np.log(deltaC)
+
+# Least-squares fit: log(deltaC) = slope*log(h) + intercept
+slope, intercept = np.polyfit(logh, log_err, 1)
+
+# Plot the fitted line for reference
+h_fit = np.linspace(min(h), max(h), 100)
+err_fit = np.exp(intercept) * h_fit**slope
+plt.loglog(h_fit, err_fit, '--', label=fr'Fit slope = {slope:.2f}')
+
+# Add the legend and finally save the plot
+plt.legend()
+plt.savefig("plots/C_convergence_plot.png", dpi=200)
