@@ -1,0 +1,18 @@
+# 1. Ignore EVERYTHING (this catches all executables and .o files)
+*
+
+# 2. Exception: Keep directories (so Git looks inside folders)
+!*/
+
+# 3. Exception: Keep the .gitignore file itself
+!.gitignore
+
+# 4. Exception: Keep your source code
+!*.C
+!*.h
+!*.png
+!*.txt
+!*.py
+
+# 5. Exception: Keep Makefiles (usually good to save)
+!Makefile
