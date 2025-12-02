@@ -5,7 +5,7 @@ CXX = g++
 # For suppresing some warning that happen
 CXXFLAGS = -c -Wall -Wno-vla-cxx-extension
 OBJS = functions.o
-TARGETS = rk4 phi C_convergence
+TARGETS = rk4 phi C_convergence f_self_convergence
 
 # Standard rule: build all targets
 all: $(TARGETS)
@@ -32,9 +32,15 @@ C_convergence.o: C_convergence.C header.h
 	$(CXX) $(CXXFLAGS) C_convergence.C
 
 
+f_self_convergence: f_self_convergence.o $(OBJS)
+	$(CXX) -o f_self_convergence f_self_convergence.o $(OBJS) -lm
+
+f_self_convergence.o: f_self_convergence.C header.h
+	$(CXX) $(CXXFLAGS) f_self_convergence.C
+
+
 functions.o: functions.C header.h
 	$(CXX) $(CXXFLAGS) functions.C
-
 
 # Clean rule
 clean:

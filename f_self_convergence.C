@@ -24,7 +24,7 @@ int main(){
     int number_of_cases = 6;
 
     // Create a file to write the values to
-    ofstream outfile("/data_files/f_self_convergence.txt");
+    ofstream outfile("data_files/f_self_convergence.txt");
     outfile << "h    f_at_5" << endl;
     
     // set the precision of the output to scientific and 15
@@ -64,7 +64,8 @@ int main(){
     // Now that everything has been writte, close the file
     outfile.close();
     // print a statement showing that the code has finished running
-    cout << "Self convergence data has been written to /data_files/f_self_convergence.txt" << endl;
+    cout << "Self convergence data has been written to data_files/f_self_convergence.txt" << endl;
+
 
     return 0;
 
