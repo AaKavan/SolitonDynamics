@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 # Load the data from the kdv_forward_solution.txt file
 # skip the header row
-data = np.loadtxt("kdv_forward_solution.txt", skiprows=1)
+data = np.loadtxt("data_files/kdv_forward_solution.txt", skiprows=1)
 
 # Extract the columns
 # These are the values for the [0, 20] region
@@ -23,7 +23,7 @@ plt.ylabel("f(X)")
 plt.title("Forward Soliton solution f(X) on [0, 20]")
 plt.grid(True)
 plt.tight_layout()
-plt.savefig("f_forward.png", dpi=200)
+plt.savefig("plots/f_forward.png", dpi=200)
 
 
 # Plot C(X)
@@ -37,10 +37,10 @@ plt.title("Constant of Motion C(X)")
 plt.grid(True)
 plt.tight_layout()
 plt.legend()
-plt.savefig("C_of_X.png", dpi=200)
+plt.savefig("plots/C_of_X.png", dpi=200)
 
 # Plot the error of C
-plt.figure(figsize=(8,5))
+plt.figure(figsize=(8,6))
 plt.plot(X, error)
 plt.yscale("log")
 plt.xlabel("X")
@@ -48,7 +48,7 @@ plt.ylabel("Absolute Error |C - C0|") # Since C0 was 0
 plt.title("Error in the Constant of Motion")
 plt.grid(True, which="both")
 plt.tight_layout()
-plt.savefig("C_error.png", dpi=200)
+plt.savefig("plots/C_error.png", dpi=200)
 
 
 
