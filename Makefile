@@ -5,7 +5,7 @@ CXX = g++
 # For suppresing some warning that happen
 CXXFLAGS = -c -Wall -Wno-vla-cxx-extension
 OBJS = functions.o
-TARGETS = rk4 phi C_convergence f_self_convergence
+TARGETS = rk4 phi C_convergence f_self_convergence richardson_extrapolation
 
 # Standard rule: build all targets
 all: $(TARGETS)
@@ -37,6 +37,13 @@ f_self_convergence: f_self_convergence.o $(OBJS)
 
 f_self_convergence.o: f_self_convergence.C header.h
 	$(CXX) $(CXXFLAGS) f_self_convergence.C
+
+
+richardson_extrapolation: richardson_extrapolation.o $(OBJS)
+	$(CXX) -o richardson_extrapolation richardson_extrapolation.o $(OBJS) -lm
+
+richardson_extrapolation.o: richardson_extrapolation.C header.h
+	$(CXX) $(CXXFLAGS) richardson_extrapolation.C
 
 
 functions.o: functions.C header.h
