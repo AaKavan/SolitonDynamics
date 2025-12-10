@@ -19,8 +19,10 @@ int main(){
     double X_final = 5.0;
 
     // Choose different numbers of steps, like we had done in HW6
-    int N_values[] = {50, 100, 200, 400, 800, 1600};
-    int number_of_cases = 6;
+    // I will choose 8 cases, as this code is not very computationally expensive
+    // The original was ran with 10,000 steps
+    int N_values[] = {50, 100, 200, 400, 800, 1600, 3200, 6400};
+    int number_of_cases = 8;
 
     // Output file for writing h and deltaC to
     ofstream outfile("data_files/C_convergence.txt");
