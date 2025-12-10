@@ -19,9 +19,9 @@ int main(){
     double X_initial = 0.0, X_final = 5.0;
 
     // Choose multiple N values
-    // I used the same values as the hw
-    int N_values[] = {50, 100, 200, 400, 800, 1600};
-    int number_of_cases = 6;
+    // I used the same values as the C_convergence part
+    int N_values[] = {50, 100, 200, 400, 800, 1600, 3200, 6400};
+    int number_of_cases = 8;
 
     // Create a file to write the values to
     ofstream outfile("data_files/f_self_convergence.txt");
