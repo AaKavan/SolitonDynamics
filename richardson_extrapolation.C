@@ -2,7 +2,7 @@
 PHYS 305 - Term Project
 richardson_extrapolation.C
 
-uses RK4 to calculate f(X=5) at two different resolutions: N = 800 and N = 1600
+uses RK4 to calculate f(X=5) at two different resolutions: N = 3200 and N = 6400
 and performs Richardson extrapolation with an order of 4
 */
 
@@ -21,9 +21,9 @@ int main(){
     int n = 4;  
 
     // First, we'll do 2 cases of running rk4
-    // one for N=800 and one for N=1600
-    // Case 1: N = 800
-    int N1 = 800;
+    // one for N=3200 and one for N=6400
+    // Case 1: N = 3200
+    int N1 = 3200;
     // step size
     double h2 = (X_final - X_initial) / N1;
 
@@ -40,8 +40,8 @@ int main(){
     double f_h2 = u2[0];
 
 
-    // Case 2: N = 1600
-    int N2 = 1600;
+    // Case 2: N = 6400
+    int N2 = 6400;
     // step size
     double h3 = (X_final - X_initial) / N2;
 
@@ -74,11 +74,11 @@ int main(){
     // the precision that I've been using throughout this project
     outfile << scientific << setprecision(15);
 
-    outfile << "h2 (N=800)    f(h2)" << endl;
+    outfile << "h2 (N=3200)    f(h2)" << endl;
     outfile << h2 << "    " << f_h2 << endl;
     // I'll put an empty line beween the different Ns
     outfile << "\n";
-    outfile << "h3 (N=1600)    f(h3)" << endl;
+    outfile << "h3 (N=6400)    f(h3)" << endl;
     outfile << h3 << "    " << f_h3 << endl;
     outfile << "\n";
     outfile << "f_Richarson" << endl;
@@ -91,8 +91,8 @@ int main(){
     // print them out in the terminal as well
     // set the precision of the terminal
     cout << scientific << setprecision(15);
-    cout << "f(h2 = 5 with N = 800) = " << f_h2 << endl;
-    cout << "f(h3 = 5 with N = 1600) = " << f_h3 << endl;
+    cout << "f(h2 = 5 with N = 3200) = " << f_h2 << endl;
+    cout << "f(h3 = 5 with N = 6400) = " << f_h3 << endl;
     cout << "f_Richardson = " << f_richardson << endl;
     cout << "Estimated Error = " << err_estimate << endl;
 
