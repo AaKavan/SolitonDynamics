@@ -113,7 +113,9 @@ double Pn(int n, double xi[], double yi[], double x){
 void write_phi_file(const char filename[], double x[], double phi[], int Nx){
 
   // Write to a file in the data_files directory
-  ofstream outfile("data_files/" + string(filename));
+  // .c_str() to convert it to string
+  ofstream outfile(("data_files/" + string(filename)).c_str());
+
 
   // set the precision to a scientific with 15
   outfile << scientific << setprecision(15);

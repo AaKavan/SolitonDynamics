@@ -2,9 +2,12 @@
 # Makefile for KdV RK4 Solver
 
 CXX = g++
-# For suppresing some warning that happen
-CXXFLAGS = -c -Wall -Wno-vla-cxx-extension
 OBJS = functions.o
+# For suppresing some warning that happen
+# CXXFLAGS = -c -Wall -Wno-vla-cxx-extension
+# For running on hpc
+CXXFLAGS = -c -Wall
+
 TARGETS = rk4 phi C_convergence f_self_convergence richardson_extrapolation
 
 # Standard rule: build all targets
